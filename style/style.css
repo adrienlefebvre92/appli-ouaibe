@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-family: Montserra, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0b4dff;
+    align-items: center;
+    padding: 10px;
+}
+
+h1 {
+    flex: 3;
+    text-align: center;
+    color: white;
+}
+
+.img-full-width {
+    width: 100%;
+}
+
+.content {
+    width: 70%;
+    margin: auto;
+}
+
+.settings-link {
+    flex: 1;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+}
+
+.developer-link {
+    flex: 1;
+    text-align: right;
+    color: white;
+    text-decoration: none;
+}
+
+.daily-forecast {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.weather-day {
+    width: 15%;
+    min-width: 30px;
+    align-items: center;
+    text-align: center;
+}

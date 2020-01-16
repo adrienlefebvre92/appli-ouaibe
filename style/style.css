@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Montserra, sans-serif;
+    background-color: #e6e6e6;
 }
 
 header {
@@ -24,6 +25,7 @@ h1 {
 .content {
     width: 70%;
     margin: auto;
+    background-color: white;
 }
 
 .settings-link {

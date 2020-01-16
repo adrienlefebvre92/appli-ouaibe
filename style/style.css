@@ -1,7 +1,7 @@
 body {
     margin: 0;
-    font-family: Montserra, sans-serif;
-    background-color: #e6e6e6;
+    font-family: Montserrat, sans-serif;
+    background-color: #f3f3f3;
 }
 
 header {
@@ -72,3 +72,54 @@ h2 {
     align-items: center;
     text-align: center;
 }
+
+.map-weather {
+    position: relative;
+}
+
+.img-map {
+    width: 5%
+}
+
+.position-map-1 {
+    position: absolute;
+    top: 35%;
+    left: 25%;
+}
+
+.position-map-2 {
+    position: absolute;
+    top: 60%;
+    left: 35%;
+}
+.position-map-3 {
+    position: absolute;
+    top: 65%;
+    left: 65%;
+}
+.position-map-4 {
+    position: absolute;
+    top: 45%;
+    left: 55%;
+}
+.position-map-5 {
+    position: absolute;
+    top: 25%;
+    left: 48%;
+}
+.position-map-6 {
+    position: absolute;
+    top: 30%;
+    left: 75%;
+}
+.position-map-7 {
+    position: absolute;
+    top: 80%;
+    left: 48%;
+}
+.position-map-8 {
+    position: absolute;
+    top: 7%;
+    left: 46%;
+}
+

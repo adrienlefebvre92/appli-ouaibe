@@ -51,18 +51,6 @@ h2 {
     text-decoration: none;
 }
 
-.daily-forecast {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-}
-
-.ephemeris {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-}
-
 .weather-day {
     width: 15%;
     min-width: 30px;
@@ -81,15 +69,15 @@ h2 {
     display: flex;
 }
 
-.justify-between {
+.justify-center {
     justify-content: center;
 }
 
-.space-between {
+.justify-between {
     justify-content: space-between;
 }
 
-.space-around {
+.justify-around {
     justify-content: space-around;
 }
 

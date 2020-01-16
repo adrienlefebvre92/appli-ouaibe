@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Montserra, sans-serif;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
     background-color: #e6e6e6;
 }
 
@@ -16,6 +16,10 @@ h1 {
     flex: 3;
     text-align: center;
     color: white;
+}
+
+.text-black {
+    color: black;
 }
 
 .img-full-width {
@@ -54,3 +58,41 @@ h1 {
     align-items: center;
     text-align: center;
 }
+
+.avatar img {
+    border-radius: 50%;
+    width: 50px;
+}
+
+/* CSS class helpers */
+
+.row {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 95%;  
+    }
+  }

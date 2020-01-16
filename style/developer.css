@@ -1,8 +1,13 @@
-section {
-  display: flex;
-  justify-content: space-around;
+@media only screen and (max-width: 768px) {
+  section {
+    flex-direction: column;
+  }
 }
 
 .card {
-  margin: 0 10px;
+  margin: 16px;
+}
+
+.avatar {
+  margin-right: 10px;
 }

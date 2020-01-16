@@ -20,6 +20,8 @@ h1 {
 
 .text-black {
     color: black;
+}
+
 h2 {
     padding: 10px;
     margin: 0;
@@ -104,8 +106,8 @@ h2 {
     .container {
         width: 95%;  
     }
-  }
-=======
+}
+
 .single-ephemeris {
     width: 15%;
     min-width: 30px;

@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Paramètres</title>
     <link rel = "stylesheet" type = "text/css" href = "../style/cards.css" />
     <link rel = "stylesheet" type = "text/css" href = "../style/style.css" />
     <link rel = "stylesheet" type = "text/css" href = "../style/settings.css" />
@@ -11,45 +11,69 @@
 <body>
     <header>
         <a class="settings-link" href="settings.html">Paramètres</a>
-        <h1>Ma chaine météo</h1>
+        <h1><a href="home_page.html">Ma chaine météo</a></h1>
         <a class="developer-link" href="developer.html">A propos du développeur</a>
     </header>
-    <section class="container row">
-        <div class="card">
-            <div class="card-header row items-center justify-center">
-                <h3>Température</h3>
-            </div>
-            <hr />
-            <div class="card-content">
-                <div>
-                    <input type="radio" id="huey" name="drone" value="huey" checked>
-                    <label for="huey">degré Celcius</label>
+    <section class="container">
+        <form>
+            <div class="settings row justify-around">
+                <div class="card">
+                    <div class="card-header row items-center justify-center">
+                        <h3>Sélectionner votre langue</h3>
+                    </div>
+                    <hr />
+                    <div class="card-content">
+                        <div class="row justify-center">
+                            <select>
+                                <option value="1">Français</option>
+                                <option value="2">English</option>
+                                <option value="3">Deutsch</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
+                <div class="card">
+                    <div class="card-header row items-center justify-center">
+                        <h3>Température</h3>
+                    </div>
+                    <hr />
+                    <div class="card-content">
+                        <div>
+                            <input type="radio" id="celcius" name="temp" value="celcius" checked>
+                            <label for="celcius">degré Celcius</label>
+                        </div>
 
-                <div>
-                    <input type="radio" id="dewey" name="drone" value="dewey">
-                    <label for="dewey">degré Farenheit</label>
+                        <div>
+                            <input type="radio" id="farenheit" name="temp" value="farenheit">
+                            <label for="farenheit">degré Farenheit</label>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header row items-center justify-center">
-                <h3>Vent</h3>
-            </div>
-            <hr />
-            <div class="card-content">
-                <div>
-                    <input type="radio" id="huey" name="drone" value="huey" checked>
-                    <label for="huey">km/h</label>
-                </div>
+                <div class="card">
+                    <div class="card-header row items-center justify-center">
+                        <h3>Vitesse du vent</h3>
+                    </div>
+                    <hr />
+                    <div class="card-content">
+                        <div>
+                            <input type="radio" id="kmh" name="wind" value="kmh" checked>
+                            <label for="kmh">km/h</label>
+                        </div>
 
-                <div>
-                    <input type="radio" id="dewey" name="drone" value="dewey">
-                    <label for="dewey">mph</label>
+                        <div>
+                            <input type="radio" id="mph" name="wind" value="mph">
+                            <label for="mph">mph</label>
+                        </div>
+                    </div>
                 </div>
-                <div>
             </div>
-        </div>
+            <div class="row justify-center">
+                <button type="button" class="button">
+                    Sauvegarder
+                </button>
+            </div>
+        </form>
     </section>
+
 </body>
 </html>

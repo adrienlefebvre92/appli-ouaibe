@@ -3,8 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel = "stylesheet" type = "text/css" href = "../style/cards.css" />
+    <link rel = "stylesheet" type = "text/css" href = "../style/style.css" />
+    <link rel = "stylesheet" type = "text/css" href = "../style/settings.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
 </head>
 <body>
+    <header>
+        <a class="settings-link" href="settings.html">Paramètres</a>
+        <h1>Ma chaine météo</h1>
+        <a class="developer-link" href="developer.html">A propos du développeur</a>
+    </header>
+    <section class="container row">
+        <div class="card">
+            <div class="card-header row items-center justify-center">
+                <h3>Température</h3>
+            </div>
+            <hr />
+            <div class="card-content">
+                <div>
+                    <input type="radio" id="huey" name="drone" value="huey" checked>
+                    <label for="huey">degré Celcius</label>
+                </div>
 
+                <div>
+                    <input type="radio" id="dewey" name="drone" value="dewey">
+                    <label for="dewey">degré Farenheit</label>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header row items-center justify-center">
+                <h3>Vent</h3>
+            </div>
+            <hr />
+            <div class="card-content">
+                <div>
+                    <input type="radio" id="huey" name="drone" value="huey" checked>
+                    <label for="huey">km/h</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="dewey" name="drone" value="dewey">
+                    <label for="dewey">mph</label>
+                </div>
+                <div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

@@ -1,0 +1,72 @@
+.single-ephemeris {
+  width: 15%;
+  min-width: 30px;
+  align-items: center;
+  text-align: center;
+}
+
+.map-weather {
+  position: relative;
+  margin: 5px;
+}
+
+.img-map {
+  width: 5%
+}
+
+.position-map-1 {
+  position: absolute;
+  top: 33%;
+  left: 25%;
+}
+
+.position-map-2 {
+  position: absolute;
+  top: 60%;
+  left: 35%;
+}
+.position-map-3 {
+  position: absolute;
+  top: 65%;
+  left: 65%;
+}
+.position-map-4 {
+  position: absolute;
+  top: 45%;
+  left: 55%;
+}
+.position-map-5 {
+  position: absolute;
+  top: 25%;
+  left: 48%;
+}
+.position-map-6 {
+  position: absolute;
+  top: 30%;
+  left: 75%;
+}
+.position-map-7 {
+  position: absolute;
+  top: 80%;
+  left: 48%;
+}
+.position-map-8 {
+  position: absolute;
+  top: 7%;
+  left: 46%;
+}
+
+.city-search {
+  border-style: solid;
+  border-color: gray;
+  width: 40%;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: large;
+}
+
+@media only screen and (max-width: 768px) {
+  .city-search {
+      width: 80%;
+  }
+}

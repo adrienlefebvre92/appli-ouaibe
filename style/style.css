@@ -23,22 +23,9 @@ header a {
     color: inherit;
 }
 
-.text-black {
-    color: black;
-}
-
 h2 {
     padding: 10px;
     margin: 0;
-}
-
-.img-full-width {
-    width: 100%;
-}
-
-.content {
-    width: 70%;
-    margin: auto;
 }
 
 .settings-link {
@@ -62,12 +49,14 @@ h2 {
     text-align: center;
 }
 
-.avatar img {
-    border-radius: 50%;
-    width: 50px;
+button:focus{
+    outline: none;
 }
 
-/* CSS class helpers */
+
+/**** CSS class helpers ****/
+
+/* Positionning helpers */
 
 .row {
     display: flex;
@@ -94,83 +83,24 @@ h2 {
     margin: auto;
 }
 
-.text-center {
-    text-align: center;
-}
-
 @media only screen and (max-width: 768px) {
     .container {
         width: 95%;
     }
 }
 
-.single-ephemeris {
-    width: 15%;
-    min-width: 30px;
-    align-items: center;
+/* Text styling helpers */
+
+.text-center {
     text-align: center;
 }
 
-.map-weather {
-    position: relative;
-    margin: 5px;
+.text-black {
+    color: black;
 }
 
-.img-map {
-    width: 5%
-}
+/* Sizing helpers */
 
-.position-map-1 {
-    position: absolute;
-    top: 33%;
-    left: 25%;
-}
-
-.position-map-2 {
-    position: absolute;
-    top: 60%;
-    left: 35%;
-}
-.position-map-3 {
-    position: absolute;
-    top: 65%;
-    left: 65%;
-}
-.position-map-4 {
-    position: absolute;
-    top: 45%;
-    left: 55%;
-}
-.position-map-5 {
-    position: absolute;
-    top: 25%;
-    left: 48%;
-}
-.position-map-6 {
-    position: absolute;
-    top: 30%;
-    left: 75%;
-}
-.position-map-7 {
-    position: absolute;
-    top: 80%;
-    left: 48%;
-}
-.position-map-8 {
-    position: absolute;
-    top: 7%;
-    left: 46%;
-}
-
-.city-search {
-    border-style: solid;
-    border-color: gray;
-    width: 40%;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: large;
-}
-
-button:focus{
-    outline: none;
+.img-full-width {
+    width: 100%;
 }

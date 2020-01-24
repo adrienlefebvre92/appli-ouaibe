@@ -6,6 +6,7 @@
     <title>Ma chaine météo</title>
     <link rel="stylesheet" type = "text/css" href="../style/style.css"/>
     <link rel = "stylesheet" type = "text/css" href = "../style/cards.css" />
+    <link rel = "stylesheet" type = "text/css" href = "../style/home_page.css" />
 </head>
 
 <body>
@@ -14,11 +15,12 @@
         <h1>Ma chaine météo</h1>
         <a class="developer-link" href="developer.html">A propos du développeur</a>
     </header>
-    <div class="content">
+    <section class="container">
         <div class="card">
             <div class="card-header">
                 <h3>Météo de Tassin-la-demi-Lune</h3>
             </div>
+            <hr />
             <div class="card-content">
                 <div class="row justify-around">
                     <div class="weather-day">
@@ -48,6 +50,7 @@
             <div class="card-header">
                 <h3>Ephémérides</h3>
             </div>
+            <hr />
             <div class="card-content">
                 <div class="row justify-around">
                     <div class="single-ephemeris">
@@ -75,6 +78,7 @@
                 <label for="city-search"></label>
                 <input type="text" id="city-search" class="city-search"/>
             </div>
+            <hr />
             <div class="card-content">
                 <div class="map-weather">
                     <img src="../pictures/map.svg" alt="France map" class="img-full-width"/>
@@ -89,6 +93,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </body>
 </html>

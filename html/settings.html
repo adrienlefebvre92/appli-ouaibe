@@ -6,9 +6,10 @@
     <link rel = "stylesheet" type = "text/css" href = "../style/cards.css" />
     <link rel = "stylesheet" type = "text/css" href = "../style/style.css" />
     <link rel = "stylesheet" type = "text/css" href = "../style/settings.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <script type="text/javascript" src="../javascript/settings.js"></script>
 </head>
-<body>
+<body id="settings">
     <header>
         <a class="settings-link" href="settings.html">Paramètres</a>
         <h1><a href="home_page.html">Ma chaine météo</a></h1>
@@ -16,7 +17,7 @@
     </header>
     <section class="container">
         <form>
-            <div class="settings row justify-around">
+    <div class="settings row justify-around">
                 <div class="card">
                     <div class="card-header row items-center justify-center">
                         <h3>Sélectionner votre langue</h3>
@@ -42,7 +43,10 @@
                             <input type="radio" id="celcius" name="temp" value="celcius" checked>
                             <label for="celcius">degré Celcius</label>
                         </div>
-
+                        <div>
+                            <input type="radio" id="kelvin" name="temp" value="kelvin">
+                            <label for="kelvin">degré Kelvin</label>
+                        </div>
                         <div>
                             <input type="radio" id="farenheit" name="temp" value="farenheit">
                             <label for="farenheit">degré Farenheit</label>
@@ -68,7 +72,7 @@
                 </div>
             </div>
             <div class="row justify-center">
-                <button type="button" class="button">
+                <button type="button" class="button" id="save_button">
                     Sauvegarder
                 </button>
             </div>

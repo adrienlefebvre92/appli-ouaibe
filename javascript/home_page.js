@@ -18,20 +18,20 @@ function setTemperatures(temperatures, units) {
 }
 
 function convertTemperatures(temperatures, units) {
-    for (let i = 0; i < temperatures.length; i++) {
+    temperatures.forEach(function(temperature, i) {
         switch (units.temp) {
             case 0:
                 break;
             case 1:
-                temperatures[i][0] = Math.round(temperatures[i][0] * 9 / 5 + 32);
-                temperatures[i][1] = Math.round(temperatures[i][1] * 9 / 5 + 32);
+                this[i][0] = Math.round(this[i][0] * 9 / 5 + 32);
+                this[i][1] = Math.round(this[i][1] * 9 / 5 + 32);
                 break;
             case 2:
-                temperatures[i][0] = temperatures[i][0] + 273;
-                temperatures[i][1] = temperatures[i][1] + 273;
+                this[i][0] = this[i][0] + 273;
+                this[i][1] = this[i][1] + 273;
                 break;
         }
-    }
+    }, temperatures);
     return temperatures;
 }
 

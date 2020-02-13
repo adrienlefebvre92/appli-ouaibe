@@ -1,29 +1,35 @@
 function init() {
-    const stored_chosen_units = localStorage.chosen_units;
-    if (stored_chosen_units) {
-        chosen_units = JSON.parse(stored_chosen_units);
+    let units = {};
+    try {
+        units = JSON.parse(localStorage.units);
+    }
+    catch(error) {
+        units = {
+            temp : 0,
+            time_format : 0
+        }
     }
     const save_button = document.getElementById("save_button");
     save_button.addEventListener("click", function (e) {
-        saveSettings();
+        saveSettings(units);
     });
-    document.getElementById("celcius").checked = chosen_units.temp === 0;
-    document.getElementById("farenheit").checked = chosen_units.temp === 1;
-    document.getElementById("kelvin").checked = chosen_units.temp === 2;
-    document.getElementById("kmh").checked = chosen_units.wind === 0;
-    document.getElementById("mph").checked = chosen_units.wind === 1;
+    document.getElementById("celcius").checked = units.temp === 0;
+    document.getElementById("farenheit").checked = units.temp === 1;
+    document.getElementById("kelvin").checked = units.temp === 2;
+    document.getElementById("24h").checked = units.time_format === 0;
+    document.getElementById("12h").checked = units.time_format === 1;
 }
 
-function saveSettings() {
+function saveSettings(units) {
     const celcius_checkbox = document.getElementById("celcius");
     const farenheit_checkbox = document.getElementById("farenheit");
     const kelvin_checkbox = document.getElementById("kelvin");
-    const kmh_checkbox = document.getElementById("kmh");
-    const mph_checkbox = document.getElementById("mph");
-    chosen_units.temp = celcius_checkbox.checked * 0 + farenheit_checkbox.checked * 1 + kelvin_checkbox.checked * 2;
-    chosen_units.wind = kmh_checkbox.checked * 0 + mph_checkbox.checked * 1;
-    localStorage.setItem("chosen_units", JSON.stringify(chosen_units));
-    console.log(chosen_units);
+    const format_24h_checkbox = document.getElementById("24h");
+    const format_12h_checkbox = document.getElementById("12h");
+    units.temp = celcius_checkbox.checked * 0 + farenheit_checkbox.checked * 1 + kelvin_checkbox.checked * 2;
+    units.time_format = format_24h_checkbox.checked * 0 + format_12h_checkbox.checked * 1;
+    localStorage.setItem("units", JSON.stringify(units));
+    console.log(units);
 }
 
 window.onload=function(){

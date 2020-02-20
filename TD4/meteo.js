@@ -83,12 +83,8 @@ function montrer(liste) {
 }
 
 function litDonnees(){
-    let vent = ""
+    let vent = "";
     $.get("meteo.xml", function(xmlDocument) {
-        // Fait quelque chose avec la variable xmlDocument
-        // Rappel: il s'agit d'un objet DOM !
-        
+        console.log($(xmlDocument).find("pression").text());
     });
-    console.log("bbb");
-    console.log(vent);
 }

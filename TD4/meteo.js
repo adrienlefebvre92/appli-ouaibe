@@ -20,6 +20,28 @@ var valeursCourantes = {
     nuage : "gris"
 }
 
+var config = {
+    "temp": {
+        "unite": 0,
+        "state": 1
+    },
+    "pression": {
+        "unite": 0,
+        "state": 0
+    },
+    "nuage": {
+        "visib": {
+            "unite": 1,
+            "state": 1
+        },
+        "status": 1
+    },
+    "vent": {
+        "unite": 0,
+        "state": 1
+    }
+};
+
 function valeurVent() {
     if (unitesChoisies.vent == 0) {
         return valeursCourantes.vent;
@@ -83,8 +105,37 @@ function montrer(liste) {
 }
 
 function litDonnees(){
-    let vent = "";
     $.get("meteo.xml", function(xmlDocument) {
         console.log($(xmlDocument).find("pression").text());
     });
+}
+
+function litConfig(){
+    Object.entries(config).forEach(([key, value]) => {
+        if (key === "nuage"){
+            unitesChoisies.visib = value.visib.unite;
+            if (value.status) {
+                $("#" + key).show()
+            }
+            else {
+                $("#" + key).hide()
+            }
+            if (value.visib.state) {
+                $("#" + key).show()
+            }
+            else {
+                $("#" + key).hide()
+            }
+        }
+        else {
+            if (value.state) {
+                $("#" + key).show()
+            }
+            else {
+                $("#" + key).hide()
+            }
+            unitesChoisies[key] = value.unite;
+        }
+    });
+    afficher();
 }

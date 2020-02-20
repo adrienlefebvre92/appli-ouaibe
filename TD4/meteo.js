@@ -106,8 +106,19 @@ function montrer(liste) {
 
 function litDonnees(){
     $.get("meteo.xml", function(xmlDocument) {
-        console.log($(xmlDocument).find("pression").text());
+        Object.keys(valeursCourantes).forEach(function (key) {
+            if (key === "visib"){
+                valeursCourantes[key] = $(xmlDocument).find("nuage").attr("visibilite");
+            }
+            else if (key === "nuage"){
+                valeursCourantes[key] = $(xmlDocument).find("description").text();
+            }
+            else {
+                valeursCourantes[key] = $(xmlDocument).find(key).text();
+            }
+        });
     });
+    afficher();
 }
 
 function litConfig(){

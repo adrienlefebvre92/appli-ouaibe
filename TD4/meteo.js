@@ -104,7 +104,7 @@ function montrer(liste) {
     }
 }
 
-function litDonnees(){
+function litDonnees(callback){
     $.get("meteo.xml", function(xmlDocument) {
         Object.keys(valeursCourantes).forEach(function (key) {
             if (key === "visib"){
@@ -118,10 +118,10 @@ function litDonnees(){
             }
         });
     });
-    afficher();
+    callback();
 }
 
-function litConfig(){
+function litConfig(callback){
     Object.entries(config).forEach(([key, value]) => {
         if (key === "nuage"){
             unitesChoisies.visib = value.visib.unite;
@@ -148,5 +148,5 @@ function litConfig(){
             unitesChoisies[key] = value.unite;
         }
     });
-    afficher();
+    callback();
 }

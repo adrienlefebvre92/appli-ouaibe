@@ -174,7 +174,7 @@ function getDataAsync() {
 function onDataFetched(ville) {    
     console.log(ville);
 
-    const { temp, humidity, pressure } = ville.main;
+    const { temp, pressure } = ville.main;
     const { coord } = ville;
 
     const visibility = ville.visibility / 1000;

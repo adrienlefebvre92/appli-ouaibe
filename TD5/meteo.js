@@ -22,6 +22,11 @@ var valeursCourantes = {
     nuage : "gris"
 }
 
+var villeCourante = {
+    nom : "Gif-Sur-Yvette",
+    pays: "Fr"
+}
+
 var config = {
     "temp": {
         "unite": 0,
@@ -92,6 +97,9 @@ function afficher() {
     $("#visib").find(".contenu").text(valeurVisib());
     $("#visib").find(".unite").text(unitesPossibles.visib[unitesChoisies.visib]);
 
+    $("#ville").text(villeCourante.nom);
+    
+
     $("#nuage").find(".contenu").text(valeursCourantes.nuage);
 }
 
@@ -146,9 +154,17 @@ function traiteErreur(jqXHR, textStatus, errorThrown) {
 }
 
 function getDataAsync() { 
+    q = villeCourante.nom + ","+ villeCourante.pays;
+
     $.ajax({
         url : "http://api.openweathermap.org/data/2.5/weather",
-        data : { q : "Londres,Angleterre", appid : "22e21ef649526ef2b1be4db6d2b0857d", mode : "json", lang : 'fr', units: 'metric' },
+        data : { 
+            q,
+            appid : "22e21ef649526ef2b1be4db6d2b0857d",
+            mode : "json",
+            lang : 'fr',
+            units: 'metric' 
+        },
         dataType : "json",
         success : onDataFetched,
         error : traiteErreur

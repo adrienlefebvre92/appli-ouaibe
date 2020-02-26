@@ -23,8 +23,9 @@ var valeursCourantes = {
 }
 
 var villeCourante = {
-    nom : "London",
-    pays: "GB"
+    nom : "Gif-sur-Yvette",
+    pays: "FR",
+    description: ""
 }
 
 var config = {
@@ -99,6 +100,8 @@ function afficher() {
 
     $("#ville").text(villeCourante.nom);
 
+    $("#descriptionVille").text(villeCourante.description);
+
     $("#nuage").find(".contenu").text(valeursCourantes.nuage);
 }
 
@@ -165,14 +168,35 @@ function getDataAsync() {
             units: 'metric' 
         },
         dataType : "json",
-        success : onDataFetched,
+        success : onWeatherDataFetched,
         error : traiteErreur
     });
+
+    $.ajax({
+        url : 'https://fr.wikipedia.org/w/api.php',
+        data : { 
+            format: 'xml',
+            origin: '*',
+            action: 'query',
+            prop: 'extracts',
+            exintro: '',
+            explaintext: '',
+            titles: villeCourante.nom,
+        },
+        dataType : "xml",
+        success : onCityDataFetched,
+        error : traiteErreur
+    });
+
+    
 }
 
-function onDataFetched(ville) {    
-    console.log(ville);
+function onCityDataFetched(villeDescriptionXml) {    
+    villeCourante.description = $(villeDescriptionXml).find("extract").text();
+    $("#descriptionVille").text(villeCourante.description);
+}
 
+function onWeatherDataFetched(ville) {    
     const { temp, pressure } = ville.main;
     const { coord } = ville;
 
@@ -191,7 +215,6 @@ function onDataFetched(ville) {
         visib: visibility,
     };
 
-    afficher();
     afficheMap(iconUrl, coord);
 }
 

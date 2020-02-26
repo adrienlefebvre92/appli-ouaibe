@@ -23,8 +23,8 @@ var valeursCourantes = {
 }
 
 var villeCourante = {
-    nom : "Gif-Sur-Yvette",
-    pays: "Fr"
+    nom : "London",
+    pays: "GB"
 }
 
 var config = {
@@ -98,7 +98,6 @@ function afficher() {
     $("#visib").find(".unite").text(unitesPossibles.visib[unitesChoisies.visib]);
 
     $("#ville").text(villeCourante.nom);
-    
 
     $("#nuage").find(".contenu").text(valeursCourantes.nuage);
 }

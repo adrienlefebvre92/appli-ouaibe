@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Météo</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://www.openlayers.org/api/OpenLayers.js"></script>
+    <script type="text/javascript" src="meteo.js"></script>
+</head>
+<body>
+<header>
+    <h1>La météo de Gif-Sur-Yvette</h1>
+</header>
+<div id="menu">
+    <ul>
+        <li><a href="config.html">Configuration</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</div>
+<div id="main">
+    <section>
+        <h2>La ville</h2>
+        <p>Gif-sur-Yvette (prononcé [ ʒif syʁ ivɛt̪] ) est une commune
+            française située à vingt-quatre kilomètres au sud-ouest de
+            Paris dans le département de l’Essonne en région
+            Île-de-France. Elle est le chef-lieu du canton de
+            Gif-sur-Yvette. Du village celte installé sur le plateau du
+            Moulon au VIe siècle av. J.-C. à l’abbaye bénédictine fondée
+            au XIIe siècle, Gif fut très tôt un site agricole et
+            spirituel important du Hurepoix. Implantée dans une valléeprivacy.file_unique_origin
+            de Chevreuse verdoyante et reliée dès le milieu du XIXe
+            siècle à la capitale par le chemin de fer, la commune devint
+            un lieu de villégiature pour les bourgeois et les artistes,privacy.file_unique_origin
+            tels Juliette Adam, Fernand Léger ou le duc de Windsor. La
+            seconde moitié du XXe siècle vit l’évolution rapide de la
+            commune avec l’implantation d’importants centres de
+            recherche et de formation scientifique, au nombre desquels
+            le CNRS ou Supélec, et le lotissement « à l’américaine » du
+            plateau sud avec la création du nouveau quartier de Chevry,
+            multipliant par trois sa population. Celle-ci devrait encore
+            s'accroître dans les années à venir avec la réalisation
+            d'une opération d'aménagement dans le quartier de Moulon,
+            qui prévoit la construction de logements et de grandes
+            écoles dans le cadre du projet de pôle technologique
+            Paris-Saclay. Ses habitants sont appelés les Giffois. </p>
+    </section>
+    <section>
+        <h2>Une carte</h2>
+        <div id="uneJoliCarte" style="height:500px; width:500px"></div>
+        <img width="200px" src="http://www.cartes-de-france.fr/carte/carte_de_france_relief.gif">
+    </section>
+    <section>
+        <h2>Les données actuelles</h2>
+        <ul>
+            <li class="contenant" id="temp">Température : <span class="contenu">12</span> <span class="unite">C</span></li>
+            <li class="contenant" id="nuage">Couverture nuageuse : <span class="contenu">gris foncé</span></li>
+            <li class="contenant" id="vent">Vent : <span class="contenu">40</span> <span class="unite">km/h</span></li>
+            <li class="contenant" id="visib">Visibilité : <span class="contenu">5</span> <span class="unite">mètres</span></li>
+            <li class="contenant" id="pression">Pression : <span class="contenu">4</span> <span class="unite">bars</span></li>
+        </ul>
+    </section>
+</div>
+<footer>
+    <address>Gateau du Glouton Inc. Corp.</address>
+</footer>
+</body>
+</html>

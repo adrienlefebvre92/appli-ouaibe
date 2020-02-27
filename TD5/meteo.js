@@ -156,12 +156,12 @@ function traiteErreur(jqXHR, textStatus, errorThrown) {
 }
 
 function getDataAsync() { 
-    q = villeCourante.nom + ","+ villeCourante.pays;
+    villePays = villeCourante.nom + ","+ villeCourante.pays;
 
     $.ajax({
         url : "http://api.openweathermap.org/data/2.5/weather",
         data : { 
-            q,
+            villePays,
             appid : "22e21ef649526ef2b1be4db6d2b0857d",
             mode : "json",
             lang : 'fr',
